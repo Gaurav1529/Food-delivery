@@ -621,18 +621,7 @@ Use the class relationships below to review how the objects interact before runn
 """
 
 
-# Complete the demonstration flow.
 
-# 1. Register customer Priya with phone 9876543210 and address Bangalore.
-# 2. Register delivery partner Rajesh with vehicle Bike.
-# 3. Create Bawarchi at MG Road and add Biryani and Kebab.
-# 4. Top up Priya's wallet by 500, then attempt a top-up of -100.
-# 5. Priya places an order for Biryani and Kebab.
-# 6. Print subtotal, GST, packaging fee, total, and estimated delivery time.
-# 7. Rajesh accepts the order. Try a wrong OTP, then deliver using 1234.
-# 8. Notify Priya and Rajesh using notify("Order delivered").
-
-# [Code Here]
 
 #@title Final validation { display-mode: "form" }
 

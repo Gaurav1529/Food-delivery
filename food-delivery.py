@@ -620,31 +620,6 @@ class DeliveryPartner(User):
 Use the class relationships below to review how the objects interact before running the complete workflow.
 """
 
-#@title Object interaction { display-mode: "form" }
-show("""
-sequenceDiagram
-    participant C as Customer
-    participant R as Restaurant
-    participant O as Order
-    participant D as DeliveryPartner
-
-    C->>R: Select menu items
-    C->>O: place_order(...)
-    O-->>C: Order created
-
-    C->>O: calculate_bill()
-
-    D->>O: accept_order(...)
-    O->>O: update_status("Accepted")
-
-    D->>O: verify_otp(1234)
-    O-->>D: OTP valid
-
-    D->>O: update_status("Delivered")
-
-    C->>C: notify("Order delivered")
-    D->>D: notify("Order delivered")
-""")
 
 # Complete the demonstration flow.
 
@@ -921,40 +896,6 @@ Create the files below after the final validation passes.
 #         return False
 #
 
-# Commented out IPython magic to ensure Python compatibility.
-# %%writefile demo.py
-# # 1. Register customer Priya with phone 9876543210 and address Bangalore.
-# # 2. Register delivery partner Rajesh with vehicle Bike.
-# # 3. Create Bawarchi at MG Road and add Biryani and Kebab.
-# # 4. Top up Priya's wallet by 500, then attempt a top-up of -100.
-# # 5. Priya places an order for Biryani and Kebab.
-# # 6. Print subtotal, GST, packaging fee, total, and estimated delivery time.
-# # 7. Rajesh accepts the order. Try a wrong OTP, then deliver using 1234.
-# # 8. Notify Priya and Rajesh using notify("Order delivered").
-# 
-# # [Code Here]
-#
-
-# Commented out IPython magic to ensure Python compatibility.
-# %%writefile requirements.txt
-# streamlit
-
-# Commented out IPython magic to ensure Python compatibility.
-# %%writefile README.md
-# # Food Delivery System
-# 
-# ## Project Description
-# 
-# [Write here]
-# 
-# ## Requirements
-# 
-# [Write here]
-# 
-# ## How to Run
-# 
-# [Write here]
-#
 
 from google.colab import files
 

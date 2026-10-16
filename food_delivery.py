@@ -135,7 +135,3 @@ class Order:
 
     def verify_otp(self, otp):
         return otp == self._otp
-
-files.download("food_delivery.py")
-files.download("demo.py")
-files.download("README.md")
